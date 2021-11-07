@@ -6,7 +6,9 @@ def validAnagram(str1, str2):
     # return true
 
     for char in str1:
-        #print(str2)
+        if len(str1) != len(str2):
+            return False
+
         index = str2.find(char)
         if index == -1:
             return False
