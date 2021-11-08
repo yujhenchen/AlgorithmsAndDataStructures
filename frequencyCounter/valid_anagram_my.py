@@ -1,5 +1,5 @@
 
-def validAnagram(str1, str2):
+def valid_anagram(str1, str2):
     # Loop element in array1
     # if any of element in array1 not in array2, return flase
     # else move the first found element in array2
@@ -19,6 +19,6 @@ def validAnagram(str1, str2):
     return True
 
 
-print(validAnagram('',''))
-print(validAnagram('aaz','zza'))
-print(validAnagram('anagram','nagaram'))
+print(valid_anagram('',''))
+print(valid_anagram('aaz','zza'))
+print(valid_anagram('anagram','nagaram'))
