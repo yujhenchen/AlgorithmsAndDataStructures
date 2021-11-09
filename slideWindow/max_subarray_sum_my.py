@@ -1,3 +1,5 @@
+import sys
+
 def max_subarray_sum(arr, n):
     # define a window with 0 as start index and len of window which is n
     # give max_sum = 0
@@ -7,7 +9,7 @@ def max_subarray_sum(arr, n):
         return None
 
     window = []
-    max_sum = 0
+    max_sum = - sys.maxsize
     max_sum_start = 0
     for i in range(0, len(arr) - n + 1, 1):
         window = arr[i : n + i]
