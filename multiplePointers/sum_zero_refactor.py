@@ -5,17 +5,17 @@ def sum_zero(array1):
     # else return None
     left = 0
     right = len(array1) - 1
-    sumNum = 0
+    sum_num = 0
     while right >= left:
         #print(array1[left])
         #print(array1[right])
-        sumNum = array1[left] + array1[right]
-        if sumNum == 0:
+        sum_num = array1[left] + array1[right]
+        if sum_num == 0:
             if left == right:
                 return [array1[left]]
             else:
                 return [array1[left], array1[right]]
-        elif sumNum>0:
+        elif sum_num>0:
             right = right - 1
         else:
             left = left + 1
