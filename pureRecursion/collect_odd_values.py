@@ -1,3 +1,7 @@
+# Tips:
+# use the method to slice array or to concat array to make sure not to mutate them
+# for the string, to slice or use sub string to get the copy of them
+
 def collect_odd_values(arr):
     # use an array variable to collect element
     # if the length of the arr is 0, return empty array
