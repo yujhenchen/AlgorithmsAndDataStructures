@@ -2,6 +2,7 @@ import math
 
 
 def binary_search(arr, val):
+    # the big O is : worst average case O(log base2 n); best: O(1)
     # move the min and max index forward to actually skip the none equal value
     min_i = 0
     max_i = len(arr) - 1
