@@ -1,4 +1,5 @@
 def bubble_sort(arr):
+    # the time complexity: best O(n), worst O(n*n)
     # use a boolean in inner loop to control whether swap or not
     no_swap = True
     tmp = 0
