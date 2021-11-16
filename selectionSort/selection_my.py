@@ -1,18 +1,14 @@
 def selection_sort(arr):
-    # loop the array till are elements are sorted
-    # keep the min and move forward
-    min_val = arr[0]
-    curr_val = 0
-    #move_min = False
-    for i in range(len(arr)):
-        for j in range(i, len(arr)):
-            if arr[j] < min_val:
-                curr_val = min_val
-                min_val = arr[j]
-                arr[j] = curr_val
-                #move_min = True
-        #if move_min:
-        #    arr[i] = min_val
+    # always let the first one to be min
+    # swap if element smaller than the min
+    # start from the next part of arr
+    tmp_val = 0
+    for start in range(len(arr)):
+        for i in range(start, len(arr)):
+            if arr[i] < arr[start]:
+                tmp_val = arr[start]
+                arr[start] = arr[i]
+                arr[i] = tmp_val
     return arr
 
 
