@@ -4,11 +4,11 @@ def insertion_sort(arr):
     # compare each element in pre array
     # set curr_element to be next elemnt of element in pre array if curr_element > element in pre array
     sorted_ls = [arr[0]]
-    curr_i = len(sorted_ls) - 1
     for i in range(1, len(arr)):
+        curr_i = len(sorted_ls) - 1
         while curr_i >= 0:
             if sorted_ls[curr_i] < arr[i]:
-                sorted_ls.insert(curr_i + 1, arr[i])
+                sorted_ls.insert(curr_i+1 , arr[i])
                 break
             else:
                 if curr_i == 0:
