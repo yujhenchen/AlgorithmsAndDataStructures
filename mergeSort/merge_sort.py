@@ -29,24 +29,28 @@ def merge_sort(arr):
     mid_i = math.floor(len(arr) / 2)
     arr1 = arr[:mid_i]
     arr2 = arr[mid_i :]
-    #if len(arr1) == 1 and len(arr2) == 1:
-    #    merging_arrays(arr1, arr2)
+    arr_s = []
 
     print(arr1)
     print(arr2)
-    print("---")
-    if len(arr1) > 1:
+    print("***")
+    if len(arr1) > 1 and len(arr2) > 1:
         merge_sort(arr1)
-    if len(arr2) > 1:
         merge_sort(arr2)
+    elif len(arr1) > 1:
+        merge_sort(arr1)
+    elif len(arr2) > 1:
+        merge_sort(arr2)
+    # print(merging_arrays(arr1, arr2))
+    # print("---")
 
 
 # test merging_arrays funciton
 # print(merging_arrays([1, 10, 50], [2, 14, 90, 100]))
 
 # test print recursive data
-merge_sort([111, 10, 50, 2, 14, 90, 100])
+# merge_sort([111, 10, 50, 2, 14, 90, 100])
 
 #print(merge_sort([1, 10, 50, 2, 14, 90, 100]))
-#print(merge_sort([111, 10, 50, 2, 14, 90, 100]))
+print(merge_sort([111, 10, 50, 2, 14, 90, 100]))
 
