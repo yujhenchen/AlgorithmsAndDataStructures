@@ -26,9 +26,6 @@ def merge_sort(arr):
     # use recursion
     # break array into 2 part with the middle element
     # when only element in each array, call merging_arrays to merge them back
-    if len(arr) <= 1:
-        return arr
-    
     mid_i = math.floor(len(arr) / 2)
     arr1 = arr[:mid_i]
     arr2 = arr[mid_i :]
