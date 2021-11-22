@@ -32,15 +32,21 @@ def merge_sort(arr):
     #if len(arr1) == 1 and len(arr2) == 1:
     #    merging_arrays(arr1, arr2)
 
-    print(arr)
+    print(arr1)
+    print(arr2)
+    print("---")
     if len(arr1) > 1:
         merge_sort(arr1)
     if len(arr2) > 1:
         merge_sort(arr2)
-    return
 
 
 # test merging_arrays funciton
 # print(merging_arrays([1, 10, 50], [2, 14, 90, 100]))
 
-print(merge_sort([1, 10, 50, 2, 14, 90, 100]))
+# test print recursive data
+merge_sort([111, 10, 50, 2, 14, 90, 100])
+
+#print(merge_sort([1, 10, 50, 2, 14, 90, 100]))
+#print(merge_sort([111, 10, 50, 2, 14, 90, 100]))
+
