@@ -5,6 +5,39 @@ class Node(object):
         self.value = value
 
 
+class SingleLinkedList:
+    def __init__(self, head):
+        super().__init__()
+        self.head = head
+
+    def push(self):
+        return
+
+    def pop(self):
+        return
+
+    def shift(self):
+        return
+
+    def unshift(self):
+        return
+
+    def get(self):
+        return
+
+    def set(self):
+        return
+
+    def insert(self):
+        return
+
+    def remove(self):
+        return
+
+    def reverse(self):
+        return
+
+
 if __name__ == "__main__":
     # test linked list nodes usage
     node1 = Node(1)
