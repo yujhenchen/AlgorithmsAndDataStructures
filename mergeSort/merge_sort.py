@@ -1,3 +1,6 @@
+import math
+
+
 def merging_arrays(arr1, arr2):
     # merged the 2 arrays and create another array that is also sorted
     # walk through elements in both array and comoare
@@ -20,7 +23,24 @@ def merging_arrays(arr1, arr2):
 
 
 def merge_sort(arr):
+    # use recursion
+    # break array into 2 part with the middle element
+    # when only element in each array, call merging_arrays to merge them back
+    mid_i = math.floor(len(arr) / 2)
+    arr1 = arr[:mid_i]
+    arr2 = arr[mid_i :]
+    #if len(arr1) == 1 and len(arr2) == 1:
+    #    merging_arrays(arr1, arr2)
+
+    print(arr)
+    if len(arr1) > 1:
+        merge_sort(arr1)
+    if len(arr2) > 1:
+        merge_sort(arr2)
     return
 
 
-print(merging_arrays([1, 10, 50], [2, 14, 90, 100]))
+# test merging_arrays funciton
+# print(merging_arrays([1, 10, 50], [2, 14, 90, 100]))
+
+print(merge_sort([1, 10, 50, 2, 14, 90, 100]))
