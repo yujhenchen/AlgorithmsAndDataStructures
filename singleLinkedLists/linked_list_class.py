@@ -74,7 +74,7 @@ class SingleLinkedList:
         self.length += 1
 
     def get(self, index):
-        if index > self.length or index == 0:
+        if index > self.length or index < 1:
             return None
         curr_node = self.head
         curr_index = 1
