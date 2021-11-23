@@ -31,22 +31,37 @@ class SingleLinkedList:
         # set next of the node to None
         # set tail to the node
         # length --
-        if self.length <= 1:
+        if self.length < 1:
+            return self, None
+        pop_node = self.tail
+        if self.length == 1:
             self.head = None
             self.tail = None
         else:
             node_before_tail = self.head
-            pop_node = self.tail
             while node_before_tail.next is not self.tail:
                 node_before_tail = node_before_tail.next
             node_before_tail.next = None
             self.tail = node_before_tail
-        if self.length > 0:
-            self.length -= 1
+        self.length -= 1
         return self, pop_node
 
     def shift(self):
-        return
+        # remove a node from the befinning of the list
+        # if length < 1
+        # if length == 1, set pop_node to head, set head and tail to none, legth --
+        # else set head to next of pre head, set pop_node = head, set next of pre head to None, legth --
+        if self.length < 1:
+            return self, None
+        pop_node = self.head
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = pop_node.next
+            pop_node.next = None
+        self.length -= 1
+        return self, pop_node
 
     def unshift(self):
         return
