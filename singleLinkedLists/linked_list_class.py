@@ -68,8 +68,9 @@ class SingleLinkedList:
         if self.length <1:
             self.head = new_head
             self.tail = new_head
-        new_head.next = self.head
-        self.head = new_head
+        else:
+            new_head.next = self.head
+            self.head = new_head
         self.length += 1
 
     def get(self):
