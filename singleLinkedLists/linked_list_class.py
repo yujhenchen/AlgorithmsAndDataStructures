@@ -6,12 +6,25 @@ class Node(object):
 
 
 class SingleLinkedList:
-    def __init__(self, head):
+    def __init__(self):
         super().__init__()
-        self.head = head
+        self.head = None
+        self.tail = None
+        self.length = 0
 
-    def push(self):
-        return
+    def push(self, value):
+        node = Node(value)
+        if self.head == None:
+            self.head = node
+            self.tail = node
+            self.length = 1
+        else:
+            curr_node = self.head
+            while curr_node.next is not None:
+                curr_node = curr_node.next
+                self.length += 1
+            curr_node.next = node
+        self.tail = node
 
     def pop(self):
         return
@@ -40,10 +53,37 @@ class SingleLinkedList:
 
 if __name__ == "__main__":
     # test linked list nodes usage
-    node1 = Node(1)
-    node2 = Node(2)
-    node1.next = node2
-    head = node1
-    while head is not None:
-        print(head.value)
-        head = head.next
+    # node1 = Node(1)
+    # node2 = Node(2)
+    # node1.next = node2
+    # head = node1
+    # while head is not None:
+    #     print(head.value)
+    #     head = head.next
+
+    linked_list = SingleLinkedList()
+
+    # push
+    linked_list.push(1)
+    linked_list.push(2)
+    linked_list.push(3)
+    curr = linked_list.head
+    while curr is not None:
+        print(curr.value)
+        curr = curr.next
+
+    # pop
+
+    # shift
+
+    # unshift
+
+    # get
+
+    # set
+
+    # insert
+
+    # remove
+
+    # reverse
