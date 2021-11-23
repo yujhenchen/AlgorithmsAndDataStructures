@@ -6,6 +6,7 @@ def print_nodes(node):
     while node is not None:
         print(node.value)
         node = node.next
+    print()
 
 
 def test_push():
@@ -20,16 +21,16 @@ def test_push():
 def test_pop():
     linked_list = test_push()
     node = linked_list.pop()
-    print("node that pop out: " + str(node.value))
+    print("test_pop: node that pop out: " + str(node.value))
     node = linked_list.pop()
-    print("node that pop out: " + str(node.value))
+    print("test_pop: node that pop out: " + str(node.value))
     print_nodes(linked_list.head)
 
 
 def test_shift():
     linked_list = test_push()
     node = linked_list.shift()
-    print("node that shift out: " + str(node.value))
+    print("test_shift: node that shift out: " + str(node.value))
     print_nodes(linked_list.head)
 
 
@@ -54,4 +55,22 @@ def test_get():
 def test_set():
     linked_list = test_push()
     linked_list.set(2, 9)
+    print_nodes(linked_list.head)
+
+
+def test_insert():
+    linked_list = test_push()
+    linked_list.insert(0, 11)
+    print_nodes(linked_list.head)
+
+    linked_list.insert(4, 111)
+    print_nodes(linked_list.head)
+
+    linked_list.insert(2, 1111)
+    print_nodes(linked_list.head)
+
+    linked_list.insert(8, 8)
+    print_nodes(linked_list.head)
+
+    linked_list.insert(-1, -1)
     print_nodes(linked_list.head)

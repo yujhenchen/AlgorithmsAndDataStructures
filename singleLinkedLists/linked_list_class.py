@@ -100,7 +100,30 @@ class SingleLinkedList:
             found_node.value = value
             return True
 
-    def insert(self):
+    def insert(self, index, value):
+        # if index == length, call push
+        # call get to get the target node at the position
+        # if head, call unshift
+        # else if tail, call push
+        # else, create a new node with the value
+        # next node = pre.next
+        # pre.next = node
+        # node.next = next node
+        # length ++
+        if index >= self.length or index < 0:
+            return False
+
+        if index == self.length - 1:
+            self.push(value)
+        elif index == 0:
+            self.unshift(value)
+        else:
+            pre_node = self.get(index)
+            pre_node_next = pre_node.next
+            node = Node(value)
+            pre_node.next = node
+            node.next = pre_node_next
+        self.length += 1
         return
 
     def remove(self):
