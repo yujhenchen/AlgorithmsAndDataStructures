@@ -23,7 +23,6 @@ class SingleLinkedList:
             self.tail = node
             self.tail.next = None
             self.length += 1
-        return self
 
     def pop(self):
         # if length is 1, set head and tail to None
@@ -44,7 +43,7 @@ class SingleLinkedList:
             node_before_tail.next = None
             self.tail = node_before_tail
         self.length -= 1
-        return self, pop_node
+        return pop_node
 
     def shift(self):
         # remove a node from the befinning of the list
@@ -61,9 +60,10 @@ class SingleLinkedList:
             self.head = pop_node.next
             pop_node.next = None
         self.length -= 1
-        return self, pop_node
+        return pop_node
 
     def unshift(self):
+        # add a node to the beginning of the list
         return
 
     def get(self):
