@@ -84,14 +84,20 @@ class SingleLinkedList:
         return curr_node
 
     def set(self, index, value):
-        if index > self.length - 1 or index < 0:
-            return None
-        curr_node = self.head
-        curr_index = 0
-        while curr_index is not index:
-            curr_node = curr_node.next
-            curr_index += 1
-        curr_node.value = value
+        # if index > self.length - 1 or index < 0:
+        #     return None
+        # curr_node = self.head
+        # curr_index = 0
+        # while curr_index is not index:
+        #     curr_node = curr_node.next
+        #     curr_index += 1
+
+        # call get to get the found node and set value
+        found_node = self.get(index)
+        if found_node is None:
+            return False
+        else:
+            found_node.value = value
 
     def insert(self):
         return
