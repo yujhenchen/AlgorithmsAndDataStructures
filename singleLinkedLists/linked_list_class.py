@@ -26,8 +26,22 @@ class SingleLinkedList:
         return self
 
     def pop(self):
-        # if length is 1, set head and tail to None, length --
-        # else 
+        # if length is 1, set head and tail to None
+        # else loop head till length-1 get the node before tail
+        # set next of the node to None
+        # set tail to the node
+        # length --
+        if self.length <= 1:
+            self.head = None
+            self.tail = None
+        else:
+            node_before_tail = self.head
+            while node_before_tail.next is not self.tail:
+                node_before_tail = node_before_tail.next
+            node_before_tail.next = None
+            self.tail = node_before_tail
+        if self.length > 0:
+            self.length -= 1
         return self
 
     def shift(self):
@@ -50,41 +64,3 @@ class SingleLinkedList:
 
     def reverse(self):
         return
-
-
-if __name__ == "__main__":
-    # test linked list nodes usage
-    # node1 = Node(1)
-    # node2 = Node(2)
-    # node1.next = node2
-    # head = node1
-    # while head is not None:
-    #     print(head.value)
-    #     head = head.next
-
-    linked_list = SingleLinkedList()
-
-    # push
-    linked_list.push(1)
-    linked_list.push(2)
-    linked_list.push(3)
-    curr = linked_list.head
-    while curr is not None:
-        print(curr.value)
-        curr = curr.next
-
-    # pop
-
-    # shift
-
-    # unshift
-
-    # get
-
-    # set
-
-    # insert
-
-    # remove
-
-    # reverse
