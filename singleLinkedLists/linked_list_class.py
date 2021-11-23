@@ -65,6 +65,9 @@ class SingleLinkedList:
     def unshift(self, value):
         # add a node to the beginning of the list
         new_head = Node(value)
+        if self.length <1:
+            self.head = new_head
+            self.tail = new_head
         new_head.next = self.head
         self.head = new_head
         self.length += 1
