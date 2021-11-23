@@ -36,13 +36,14 @@ class SingleLinkedList:
             self.tail = None
         else:
             node_before_tail = self.head
+            pop_node = self.tail
             while node_before_tail.next is not self.tail:
                 node_before_tail = node_before_tail.next
             node_before_tail.next = None
             self.tail = node_before_tail
         if self.length > 0:
             self.length -= 1
-        return self
+        return self, pop_node
 
     def shift(self):
         return
