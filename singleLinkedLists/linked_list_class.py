@@ -19,12 +19,8 @@ class SingleLinkedList:
             self.tail = node
             self.length = 1
         else:
-            curr_node = self.head
-            while curr_node.next is not None:
-                curr_node = curr_node.next
-                self.length += 1
-            curr_node.next = node
-        self.tail = node
+            self.tail.next = node
+            self.tail = node
 
     def pop(self):
         return
