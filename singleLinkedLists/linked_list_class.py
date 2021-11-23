@@ -83,7 +83,7 @@ class SingleLinkedList:
             curr_index += 1
         return curr_node
 
-    def set(self, index):
+    def set(self, index, value):
         if index > self.length - 1 or index < 0:
             return None
         curr_node = self.head
@@ -91,6 +91,7 @@ class SingleLinkedList:
         while curr_index is not index:
             curr_node = curr_node.next
             curr_index += 1
+        curr_node.value = value
 
     def insert(self):
         return
