@@ -42,14 +42,10 @@ def test_unshift():
 def test_get():
     linked_list = test_push()
     node = linked_list.get(0)
-    if node is not None:
-        print("test_get: " + str(node.value))
     node = linked_list.get(1)
     print("test_get: " + str(node.value))
     node = linked_list.get(2)
     print("test_get: " + str(node.value))
     node = linked_list.get(3)
-    print("test_get: " + str(node.value))
-    node = linked_list.get(4)
     if node is not None:
         print("test_get: " + str(node.value))

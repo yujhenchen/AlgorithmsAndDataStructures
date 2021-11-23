@@ -74,17 +74,23 @@ class SingleLinkedList:
         self.length += 1
 
     def get(self, index):
-        if index > self.length or index < 1:
+        if index > self.length - 1 or index < 0:
             return None
         curr_node = self.head
-        curr_index = 1
+        curr_index = 0
         while curr_index is not index:
             curr_node = curr_node.next
             curr_index += 1
         return curr_node
 
-    def set(self):
-        return
+    def set(self, index):
+        if index > self.length - 1 or index < 0:
+            return None
+        curr_node = self.head
+        curr_index = 0
+        while curr_index is not index:
+            curr_node = curr_node.next
+            curr_index += 1
 
     def insert(self):
         return
