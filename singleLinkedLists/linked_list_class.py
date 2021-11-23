@@ -21,11 +21,14 @@ class SingleLinkedList:
         else:
             self.tail.next = node
             self.tail = node
+            self.tail.next = None
             self.length += 1
         return self
 
     def pop(self):
-        return
+        # if length is 1, set head and tail to None, length --
+        # else 
+        return self
 
     def shift(self):
         return
