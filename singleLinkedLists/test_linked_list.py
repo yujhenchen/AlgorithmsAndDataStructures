@@ -25,8 +25,15 @@ def test_pop():
     print("node that pop out: " + str(node.value))
     print_nodes(linked_list.head)
 
+
 def test_shift():
     linked_list = test_push()
     node = linked_list.shift()
     print("node that shift out: " + str(node.value))
+    print_nodes(linked_list.head)
+
+
+def test_unshift():
+    linked_list = test_push()
+    linked_list.unshift(4)
     print_nodes(linked_list.head)

@@ -62,9 +62,12 @@ class SingleLinkedList:
         self.length -= 1
         return pop_node
 
-    def unshift(self):
+    def unshift(self, value):
         # add a node to the beginning of the list
-        return
+        new_head = Node(value)
+        new_head.next = self.head
+        self.head = new_head
+        self.length += 1
 
     def get(self):
         return
