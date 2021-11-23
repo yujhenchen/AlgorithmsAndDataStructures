@@ -98,6 +98,7 @@ class SingleLinkedList:
             return False
         else:
             found_node.value = value
+            return True
 
     def insert(self):
         return
