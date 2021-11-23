@@ -21,6 +21,8 @@ class SingleLinkedList:
         else:
             self.tail.next = node
             self.tail = node
+            self.length += 1
+        return self
 
     def pop(self):
         return
