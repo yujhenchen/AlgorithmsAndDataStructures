@@ -101,8 +101,6 @@ class SingleLinkedList:
             return True
 
     def insert(self, index, value):
-        # if index == length, call push
-        # call get to get the target node at the position
         # if head, call unshift
         # else if tail, call push
         # else, create a new node with the value
@@ -123,11 +121,29 @@ class SingleLinkedList:
             node = Node(value)
             pre_node.next = node
             node.next = pre_node_next
-        self.length += 1
-        return
+            self.length += 1
+        return True
 
-    def remove(self):
-        return
+    def remove(self, index):
+        # if head, call shift
+        # if tail, call pop
+        # get node before target node
+        # pre.next = target.next
+        # target.next = None
+        if index >= self.length or index < 0:
+            return None
+        node = None
+        if index == 0:
+            node = self.shift()
+        elif index == self.length - 1:
+            node = self.pop()
+        else:
+            pre_node = self.get(index - 1)
+            target_node = pre_node.next
+            pre_node.next = target_node.next
+            target_node.next = None
+            self.length -= 1
+        return node
 
     def reverse(self):
         return

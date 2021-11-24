@@ -14,6 +14,8 @@ def test_push():
     linked_list.push(1)
     linked_list.push(2)
     linked_list.push(3)
+    linked_list.push(4)
+    linked_list.push(5)
     print_nodes(linked_list.head)
     return linked_list
 
@@ -73,4 +75,25 @@ def test_insert():
     print_nodes(linked_list.head)
 
     linked_list.insert(-1, -1)
+    print_nodes(linked_list.head)
+
+
+def test_remove():
+    linked_list = test_push()
+    linked_list.remove(-1)
+    print_nodes(linked_list.head)
+
+    linked_list.remove(6)
+    print_nodes(linked_list.head)
+
+    linked_list.remove(5)
+    print_nodes(linked_list.head)
+
+    linked_list.remove(0)
+    print_nodes(linked_list.head)
+
+    linked_list.remove(3)
+    print_nodes(linked_list.head)
+
+    linked_list.remove(1)
     print_nodes(linked_list.head)
