@@ -9,6 +9,9 @@ class Node(object):
 class DoublyLinkedList(object):
     def __init__(self):
         super().__init__()
+        self.head = None
+        self.tail = None
+        self.length = 0
 
     def push(self, value):
         return
