@@ -146,30 +146,38 @@ class SingleLinkedList:
         return node
 
     def reverse(self):
+        # My work
         # if length == 2
         # pre_head = head, head = tail, head.next = pre_head, tail = pre_head, tail.next = None
         # if length > 2
         # loop the linked list and keep all nodes, loop the list backward to set next, set head and tail
-        if self.length == 2:
-            pre_head = self.head
-            self.head = self.tail
-            self.head.next = pre_head
-            self.tail = pre_head
-            self.tail.next = None
-        elif self.length > 2:
-            node_ls = []
-            curr_node = self.head
-            while curr_node.next is not None:
-                node_ls.append(curr_node)
-                curr_node = curr_node.next
-            # debug use
-            # for i in range(len(node_ls)):
-            #     print("node_ls value: " + str(node_ls[i].value))
-            for i in range(len(node_ls) - 1, 0, -1):
-                # print("current i is : " + str(i))
-                node_ls[i].next = node_ls[i - 1]
-            self.head = self.tail
-            self.head.next = node_ls[len(node_ls) - 1]
-            self.tail = node_ls[0]
-            self.tail.next = None
+        # if self.length == 2:
+        #     pre_head = self.head
+        #     self.head = self.tail
+        #     self.head.next = pre_head
+        #     self.tail = pre_head
+        #     self.tail.next = None
+        # elif self.length > 2:
+        #     node_ls = []
+        #     curr_node = self.head
+        #     while curr_node.next is not None:
+        #         node_ls.append(curr_node)
+        #         curr_node = curr_node.next
+        #     # debug use
+        #     # for i in range(len(node_ls)):
+        #     #     print("node_ls value: " + str(node_ls[i].value))
+        #     for i in range(len(node_ls) - 1, 0, -1):
+        #         # print("current i is : " + str(i))
+        #         node_ls[i].next = node_ls[i - 1]
+        #     self.head = self.tail
+        #     self.head.next = node_ls[len(node_ls) - 1]
+        #     self.tail = node_ls[0]
+        #     self.tail.next = None
+
+        # Solution
+        # keep the next node of curr_node to be next_node
+        # curr_node.next = curr_node
+        # curr_node = next_node
+        # next_node = next_node.next
+
         return
