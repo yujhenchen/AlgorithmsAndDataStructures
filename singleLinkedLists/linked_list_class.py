@@ -175,9 +175,14 @@ class SingleLinkedList:
         #     self.tail.next = None
 
         # Solution
-        # keep the next node of curr_node to be next_node
-        # curr_node.next = curr_node
-        # curr_node = next_node
-        # next_node = next_node.next
-
+        node = self.head
+        self.head = self.tail
+        self.tail = node
+        prev_node = None
+        next_node = None
+        for i in range(self.length):
+            next_node = node.next
+            node.next = prev_node
+            prev_node = node
+            node = next_node
         return
