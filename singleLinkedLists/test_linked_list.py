@@ -97,3 +97,9 @@ def test_remove():
 
     linked_list.remove(1)
     print_nodes(linked_list.head)
+
+
+def test_reverse():
+    linked_list = test_push()
+    linked_list.reverse()
+    print_nodes(linked_list.head)
