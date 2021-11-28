@@ -25,7 +25,7 @@ def test_push():
     return linked_list
 
 
-#@pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_pop():
     linked_list = test_push()
     node = linked_list.pop()
@@ -35,7 +35,7 @@ def test_pop():
     print_nodes(linked_list.head)
 
 
-@pytest.mark.skip(reason="wait for finishing")
+#@pytest.mark.skip(reason="wait for finishing")
 def test_shift():
     linked_list = test_push()
     node = linked_list.shift()

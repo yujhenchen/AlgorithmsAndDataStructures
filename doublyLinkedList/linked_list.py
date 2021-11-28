@@ -46,7 +46,19 @@ class DoublyLinkedList(object):
         return node
 
     def shift(self):
-        return
+        # 
+        node = None
+        if self.length >= 1:
+            node = self.head
+            if self.length == 1:
+                self.head = None
+                self.tail = None
+            else:
+                self.head = self.head.next
+                self.head.prev = None
+        node.next = None
+        self.length -= 1
+        return node
 
     def unshift(self, value):
         return
@@ -61,4 +73,7 @@ class DoublyLinkedList(object):
         return
 
     def remove(self, index):
+        return
+    
+    def reverse(self):
         return
