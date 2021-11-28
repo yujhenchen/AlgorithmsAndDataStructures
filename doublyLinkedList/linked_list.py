@@ -154,13 +154,13 @@ class DoublyLinkedList(object):
         p_node = node.prev
         n_node = node.next
         while n_node is not None:
-            # update node
             node.next = p_node
             node.prev = n_node
 
-            # move forward
             p_node = node
             node = n_node
+            n_node = n_node.next
         self.head = node
+        self.head.next = p_node
         self.tail.next = None
         return
