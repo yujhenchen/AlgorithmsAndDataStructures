@@ -4,12 +4,16 @@ from linked_list import DoublyLinkedList
 
 def print_nodes(node):
     while node is not None:
-        print(node.value)
+        if node.prev is not None:
+            print("node prev value: " + str(node.prev.value))
+        print("node value: " + str(node.value))
+        if node.next is not None:
+            print("node next value: " + str(node.next.value))
         node = node.next
     print()
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_push():
     linked_list = DoublyLinkedList()
     linked_list.push(1)
@@ -21,7 +25,7 @@ def test_push():
     return linked_list
 
 
-@pytest.mark.skip(reason="wait for finishing")
+#@pytest.mark.skip(reason="wait for finishing")
 def test_pop():
     linked_list = test_push()
     node = linked_list.pop()

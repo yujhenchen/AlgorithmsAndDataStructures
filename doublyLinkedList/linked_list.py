@@ -30,7 +30,20 @@ class DoublyLinkedList(object):
         return
 
     def pop(self):
-        return
+        # if length == 0, head and tail set to None
+        # else, keep tail as node, set tail.prev as tail, node.prev = None, tail.next = None
+        node = None
+        if self.length >= 1:
+            node = self.tail
+            if self.length == 1:
+                self.head = None
+                self.tail = None
+            else:
+                node.prev = None
+                self.tail = self.tail.prev
+                self.tail.next = None
+            self.length -= 1
+        return node
 
     def shift(self):
         return
