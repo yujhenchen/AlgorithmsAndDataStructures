@@ -1,5 +1,5 @@
-from linked_list_class import Node
-from linked_list_class import SingleLinkedList
+from linked_list import Node
+from linked_list import SingleLinkedList
 
 
 def print_nodes(node):

@@ -46,7 +46,7 @@ class DoublyLinkedList(object):
         return node
 
     def shift(self):
-        # 
+        # remove the first node
         node = None
         if self.length >= 1:
             node = self.head
@@ -61,6 +61,8 @@ class DoublyLinkedList(object):
         return node
 
     def unshift(self, value):
+        # add a node to the beginning of the linked list
+        
         return
 
     def get(self, index):
