@@ -67,7 +67,7 @@ def test_get():
         print("test_get: " + str(node.value))
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_set():
     linked_list = test_push()
     linked_list.set(0, 11)

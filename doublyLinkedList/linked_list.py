@@ -97,9 +97,10 @@ class DoublyLinkedList(object):
 
     def set(self, index, value):
         if index >= self.length or index < 0:
-            return None
+            return False
         else:
             self.get(index).value = value
+            return True
 
     def insert(self, index, value):
         return
