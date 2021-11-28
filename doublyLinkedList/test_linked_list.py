@@ -77,7 +77,7 @@ def test_set():
     print_nodes(linked_list.head)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_insert():
     linked_list = test_push()
     linked_list.insert(0, 111)
@@ -94,7 +94,7 @@ def test_insert():
     linked_list = test_push()
     linked_list.insert(5, 555)
     print_nodes(linked_list.head)
-    
+
     linked_list = test_push()
     linked_list.insert(6, 666)
     print_nodes(linked_list.head)
@@ -104,25 +104,28 @@ def test_insert():
     print_nodes(linked_list.head)
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_remove():
     linked_list = test_push()
-    linked_list.remove(-1)
+    linked_list.remove(0)
+    print_nodes(linked_list.head)
+
+    linked_list = test_push()
+    linked_list.remove(4)
+    print_nodes(linked_list.head)
+
+    linked_list = test_push()
+    linked_list.remove(2)
+    print_nodes(linked_list.head)
+
+    linked_list = test_push()
+    linked_list.remove(5)
     print_nodes(linked_list.head)
 
     linked_list.remove(6)
     print_nodes(linked_list.head)
 
-    linked_list.remove(5)
-    print_nodes(linked_list.head)
-
-    linked_list.remove(0)
-    print_nodes(linked_list.head)
-
-    linked_list.remove(3)
-    print_nodes(linked_list.head)
-
-    linked_list.remove(1)
+    linked_list.remove(-1)
     print_nodes(linked_list.head)
 
 

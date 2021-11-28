@@ -113,7 +113,7 @@ class DoublyLinkedList(object):
             return False
         if index == 0:
             self.unshift(value)
-        elif index == self.length -1:
+        elif index == self.length - 1:
             self.push(value)
         else:
             pre_node = self.get(index)
@@ -126,7 +126,27 @@ class DoublyLinkedList(object):
         return True
 
     def remove(self, index):
-        return
+        # return false if index < 0 or >= length
+        # return head if length is 1, set head and tail to None
+        # call shift if index is 0
+        # call pop if index is length-1
+        # get the node to remove as rm_node, rm_node.prev.next = rm_node.next
+        # rm_node.next.prev = rm_node.prev
+        # rm_node.next = None, # rm_node.prev = None
+        if index >= self.length or index < 0:
+            return None
+        rm_node = None
+        if index == 0:
+            rm_node = self.shift()
+        elif index == self.length - 1:
+            rm_node = self.pop()
+        else:
+            rm_node = self.get(index)
+            rm_node.prev.next = rm_node.next
+            rm_node.next.prev = rm_node.prev
+            rm_node.next = rm_node.prev = None
+        self.length -= 1
+        return rm_node
 
     def reverse(self):
         return
