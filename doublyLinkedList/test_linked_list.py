@@ -104,7 +104,7 @@ def test_insert():
     print_nodes(linked_list.head)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_remove():
     linked_list = test_push()
     linked_list.remove(0)
@@ -129,7 +129,7 @@ def test_remove():
     print_nodes(linked_list.head)
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_reverse():
     linked_list = test_push()
     linked_list.reverse()

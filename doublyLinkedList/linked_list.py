@@ -149,4 +149,18 @@ class DoublyLinkedList(object):
         return rm_node
 
     def reverse(self):
+        self.tail = self.head
+        node = self.head
+        p_node = node.prev
+        n_node = node.next
+        while n_node is not None:
+            # update node
+            node.next = p_node
+            node.prev = n_node
+
+            # move forward
+            p_node = node
+            node = n_node
+        self.head = node
+        self.tail.next = None
         return
