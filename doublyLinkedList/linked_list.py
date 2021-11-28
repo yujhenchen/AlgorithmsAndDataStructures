@@ -39,9 +39,9 @@ class DoublyLinkedList(object):
                 self.head = None
                 self.tail = None
             else:
-                node.prev = None
                 self.tail = self.tail.prev
                 self.tail.next = None
+            node.prev = None
             self.length -= 1
         return node
 
