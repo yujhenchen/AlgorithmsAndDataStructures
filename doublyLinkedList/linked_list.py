@@ -103,7 +103,27 @@ class DoublyLinkedList(object):
             return True
 
     def insert(self, index, value):
-        return
+        # return false if index > length or index < 0
+        # call unshift if index == 0
+        # call push if index == length
+        # call get to get node of insert position as pre_node
+        # create new node, node.next = pre_node.next, node.prev= pre_node
+        # pre_node.next.prev = node, pre_node.next = node
+        if index >= self.length or index < 0:
+            return False
+        if index == 0:
+            self.unshift(value)
+        elif index == self.length -1:
+            self.push(value)
+        else:
+            pre_node = self.get(index)
+            node = Node(value)
+            node.next = pre_node.next
+            node.prev = pre_node
+            pre_node.next.prev = node
+            pre_node.next = node
+        self.length += 1
+        return True
 
     def remove(self, index):
         return

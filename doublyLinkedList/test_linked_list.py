@@ -77,21 +77,29 @@ def test_set():
     print_nodes(linked_list.head)
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_insert():
     linked_list = test_push()
-    linked_list.insert(0, 11)
+    linked_list.insert(0, 111)
     print_nodes(linked_list.head)
 
-    linked_list.insert(4, 111)
+    linked_list = test_push()
+    linked_list.insert(4, 444)
     print_nodes(linked_list.head)
 
-    linked_list.insert(2, 1111)
+    linked_list = test_push()
+    linked_list.insert(2, 222)
     print_nodes(linked_list.head)
 
-    linked_list.insert(8, 8)
+    linked_list = test_push()
+    linked_list.insert(5, 555)
+    print_nodes(linked_list.head)
+    
+    linked_list = test_push()
+    linked_list.insert(6, 666)
     print_nodes(linked_list.head)
 
+    linked_list = test_push()
     linked_list.insert(-1, -1)
     print_nodes(linked_list.head)
 
