@@ -1,3 +1,6 @@
+import math
+
+
 class Node(object):
     def __init__(self, value):
         super().__init__()
@@ -73,7 +76,24 @@ class DoublyLinkedList(object):
         return
 
     def get(self, index):
-        return
+        # return None if index >= length
+        # check index is bigger or smaller than mid length
+        # loop from head if index < mid length
+        # loop from tail if index > mid length
+        if index >= self.length:
+            return None
+        else:
+            mid_length = math.floor(self.length / 2)
+            node = None
+            if index <= mid_length:
+                node = self.head
+                for i in range(index):
+                    node = node.next
+            else:
+                node = self.tail
+                for i in range(self.length, index + 1, -1):
+                    node = node.prev
+            return node
 
     def set(self, index, value):
         return
@@ -83,6 +103,6 @@ class DoublyLinkedList(object):
 
     def remove(self, index):
         return
-    
+
     def reverse(self):
         return
