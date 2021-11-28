@@ -80,7 +80,7 @@ class DoublyLinkedList(object):
         # check index is bigger or smaller than mid length
         # loop from head if index < mid length
         # loop from tail if index > mid length
-        if index >= self.length:
+        if index >= self.length or index < 0:
             return None
         else:
             mid_length = math.floor(self.length / 2)
@@ -96,7 +96,10 @@ class DoublyLinkedList(object):
             return node
 
     def set(self, index, value):
-        return
+        if index >= self.length or index < 0:
+            return None
+        else:
+            self.get(index).value = value
 
     def insert(self, index, value):
         return

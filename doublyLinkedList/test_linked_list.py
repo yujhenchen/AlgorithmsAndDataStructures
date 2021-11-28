@@ -51,7 +51,7 @@ def test_unshift():
     print_nodes(linked_list.head)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_get():
     linked_list = test_push()
     node = linked_list.get(0)
@@ -67,10 +67,13 @@ def test_get():
         print("test_get: " + str(node.value))
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_set():
     linked_list = test_push()
-    linked_list.set(2, 9)
+    linked_list.set(0, 11)
+    linked_list.set(3, 111)
+    linked_list.set(4, 1111)
+    linked_list.set(5, 11111)
     print_nodes(linked_list.head)
 
 
