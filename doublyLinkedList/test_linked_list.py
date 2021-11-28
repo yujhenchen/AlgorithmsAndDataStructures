@@ -9,7 +9,7 @@ def print_nodes(node):
     print()
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_push():
     linked_list = DoublyLinkedList()
     linked_list.push(1)

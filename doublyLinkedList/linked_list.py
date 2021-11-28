@@ -14,6 +14,19 @@ class DoublyLinkedList(object):
         self.length = 0
 
     def push(self, value):
+        # create new node
+        # tail.next = node
+        # node.prev = tail
+        # tail = node
+        node = Node(value)
+        if self.length == 0:
+            self.head = node
+            self.tail = node
+        else:
+            self.tail.next = node
+            node.prev = self.tail
+            self.tail = node
+        self.length += 1
         return
 
     def pop(self):
