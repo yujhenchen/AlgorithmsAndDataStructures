@@ -17,6 +17,6 @@ class Stack(object):
     def pop(self):
         if self.length < 1:
             return None
-        self.length -= 1
         value = self.data.pop()
+        self.length -= 1
         return value

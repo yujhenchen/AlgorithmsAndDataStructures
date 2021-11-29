@@ -105,3 +105,4 @@ dist
 /.vscode/settings.json
 /singleLinkedLists/__pycache__
 /doublyLinkedList/__pycache__
+/stacksAndQueue/__pycache__
