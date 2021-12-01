@@ -19,7 +19,31 @@ class BST(object):
         super().__init__()
         self.root = None
 
+    def insert_helper(self, cur_root, node):
+        if node.value >= cur_root.value:
+            if cur_root.right is None:
+                cur_root.right = node
+            else:
+                self.insert_helper(cur_root.right, node)
+        else:
+            if cur_root.left is None:
+                cur_root.left = node
+            else:
+                self.insert_helper(cur_root.left, node)
+
     def insert(self, value):
+        # create a node
+        # if root is None, root = node
+
+        # else
+        # cur_root = root
+        # loop
+        # if node >= cur_root,
+        # if cur_root has no right, cur_root.right = node, break
+        # else cur_root = cur_root.right
+
+        # if node < cur_root, if cur_root has no left cur_root.lef = node, break
+        # else cur_root = cur_root.left
         return
 
     def find(self, value):
