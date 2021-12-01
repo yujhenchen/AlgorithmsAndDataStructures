@@ -19,9 +19,6 @@ class BST(object):
         super().__init__()
         self.root = None
 
-    def print_tree(self):
-        print()
-
     def insert_helper(self, cur_root, node):
         if node.value >= cur_root.value:
             if cur_root.right is None:
