@@ -19,6 +19,9 @@ class BST(object):
         super().__init__()
         self.root = None
 
+    def print_tree(self):
+        print()
+
     def insert_helper(self, cur_root, node):
         if node.value >= cur_root.value:
             if cur_root.right is None:
@@ -44,6 +47,12 @@ class BST(object):
 
         # if node < cur_root, if cur_root has no left cur_root.lef = node, break
         # else cur_root = cur_root.left
+        node = Node(value)
+        if self.root == None:
+            self.root = node
+        else:
+            cur_root = self.root
+            self.insert_helper(cur_root, node)
         return
 
     def find(self, value):
