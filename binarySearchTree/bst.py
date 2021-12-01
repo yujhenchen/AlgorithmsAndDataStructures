@@ -18,3 +18,9 @@ class BST(object):
     def __init__(self):
         super().__init__()
         self.root = None
+
+    def insert(self, value):
+        return
+
+    def find(self, value):
+        return
