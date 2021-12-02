@@ -59,5 +59,12 @@ class BST(object):
         # if value < cur_root, cur_root = left
         found_node = None
         cur_root = self.root
-
+        while cur_root is not None:
+            if cur_root.value == value:
+                found_node = cur_root
+                break
+            if cur_root.value > value:
+                cur_root = cur_root.right
+            else:
+                cur_root = cur_root.left
         return found_node
