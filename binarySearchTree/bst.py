@@ -53,4 +53,11 @@ class BST(object):
         return
 
     def find(self, value):
-        return
+        # loop, stop at cur_root == None
+        # if value == cur_root, found, break
+        # if value > cur_root, cur_root = right
+        # if value < cur_root, cur_root = left
+        found_node = None
+        cur_root = self.root
+
+        return found_node
