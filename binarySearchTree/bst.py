@@ -6,6 +6,10 @@
 # binary search tree is a type of binary tree, it sorted in order (BST)
 
 
+# complexity is O(log n), but it is not guaranteed when sometimes tree grows on the certain side only
+# for example, only has right nodes as in the test_bst
+
+
 class Node(object):
     def __init__(self, value):
         super().__init__()
