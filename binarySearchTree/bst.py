@@ -60,12 +60,10 @@ class BST(object):
         found_node = None
         cur_root = self.root
         while cur_root is not None:
-            print(cur_root.value)
-            print()
-            if cur_root.value == value:
+            if value == cur_root.value:
                 found_node = cur_root
                 break
-            if cur_root.value > value:
+            if value > cur_root.value:
                 cur_root = cur_root.right
             else:
                 cur_root = cur_root.left
