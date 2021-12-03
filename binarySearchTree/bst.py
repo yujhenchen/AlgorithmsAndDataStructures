@@ -20,7 +20,7 @@ class BST(object):
         self.root = None
 
     def insert_helper(self, cur_root, node):
-        if node.value >= cur_root.value:
+        if node.value > cur_root.value:
             if cur_root.right is None:
                 cur_root.right = node
             else:
@@ -60,6 +60,8 @@ class BST(object):
         found_node = None
         cur_root = self.root
         while cur_root is not None:
+            print(cur_root.value)
+            print()
             if cur_root.value == value:
                 found_node = cur_root
                 break
