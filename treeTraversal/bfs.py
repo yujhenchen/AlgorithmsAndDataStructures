@@ -4,3 +4,24 @@
 # if the first node in the queue has right, move right into queue
 # everytime set current root to the first node in the queue
 # return visited queue when current root is None
+def bfs(root):
+    queue = []
+    visited = []
+
+    if root is None:
+        return visited
+
+    visited.append(root)
+
+    if root.left is None and root.right is None:
+        return visited
+    else:
+        if root.left is not None:
+            visited.append(root.left)
+        if root.right is not None:
+            visited.append(root.right)
+
+        if root.left is not None:
+            return visited.append(bfs(root.left))
+        if root.right is not None:
+            return visited.append(bfs(root.right))
