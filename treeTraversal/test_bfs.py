@@ -9,6 +9,7 @@ def test_bfs():
     bst.insert(4)
     bst.insert(3)
     bst.insert(12)
+    bst.insert(7)
 
     print(bst.root.value)
     results = bfs(bst.root)

@@ -5,7 +5,6 @@
 # everytime set current root to the first node in the queue
 # return visited queue when current root is None
 def bfs(root):
-    queue = []
     visited = []
 
     if root is None:
@@ -22,6 +21,6 @@ def bfs(root):
             visited.append(root.right)
 
         if root.left is not None:
-            return visited.append(bfs(root.left))
+            return visited + bfs(root.left)
         if root.right is not None:
-            return visited.append(bfs(root.right))
+            return visited + bfs(root.right)
