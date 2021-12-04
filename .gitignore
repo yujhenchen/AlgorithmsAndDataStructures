@@ -108,3 +108,4 @@ dist
 /stacksAndQueue/__pycache__
 /binarySearchTree/__pycache__
 /treeTraversal/__pycache__
+/.pytest_cache
