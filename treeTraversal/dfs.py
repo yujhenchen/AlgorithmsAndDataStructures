@@ -26,10 +26,14 @@ def post_order_dfs(root):
     if root is None:
         return visited
 
-    post_order_dfs(root.left), post_order_dfs(root.right)
+    post_order_dfs(root.left)
+    post_order_dfs(root.right)
 
     if root.left is not None:
-        print("root.left.value: " + str(root.left.value))
+        # print("root.left.value: " + str(root.left.value))
+        visited.append(root.left)
     if root.right is not None:
-        print("root.right.value: " + str(root.right.value))
-
+        # print("root.right.value: " + str(root.right.value))
+        visited.append(root.right)
+    for node in visited:
+        print(node.value)
