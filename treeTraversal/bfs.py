@@ -11,16 +11,24 @@ def bfs(root):
         return visited
 
     visited.append(root)
+    
+    if root.left is not None:
+        visited.append(root.left)
+    if root.right is not None:
+        visited.append(root.right)
 
-    if root.left is None and root.right is None:
-        return visited
-    else:
-        if root.left is not None:
-            visited.append(root.left)
-        if root.right is not None:
-            visited.append(root.right)
+    return visited + bfs(root.left) + bfs(root.right)
 
-        return visited + bfs(root.left) + bfs(root.right)
+    # Remove not need part
+    # if root.left is None and root.right is None:
+    #     return visited
+    # else:
+    #     if root.left is not None:
+    #         visited.append(root.left)
+    #     if root.right is not None:
+    #         visited.append(root.right)
+
+    #     return visited + bfs(root.left) + bfs(root.right)
         # Below is the first attempt that I didn't figure how to include the right part of the tree
         # if root.left is not None:
         #     return visited + bfs(root.left)
