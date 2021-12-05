@@ -10,8 +10,9 @@ def bfs(root):
     if root is None:
         return visited
 
-    visited.append(root)
-    
+    if visited.count == 0:
+        visited.append(root)
+
     if root.left is not None:
         visited.append(root.left)
     if root.right is not None:
@@ -29,8 +30,8 @@ def bfs(root):
     #         visited.append(root.right)
 
     #     return visited + bfs(root.left) + bfs(root.right)
-        # Below is the first attempt that I didn't figure how to include the right part of the tree
-        # if root.left is not None:
-        #     return visited + bfs(root.left)
-        # if root.right is not None:
-        #     return visited + bfs(root.right)
+    # Below is the first attempt that I didn't figure how to include the right part of the tree
+    # if root.left is not None:
+    #     return visited + bfs(root.left)
+    # if root.right is not None:
+    #     return visited + bfs(root.right)
