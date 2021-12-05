@@ -20,7 +20,9 @@ def bfs(root):
         if root.right is not None:
             visited.append(root.right)
 
-        if root.left is not None:
-            return visited + bfs(root.left)
-        if root.right is not None:
-            return visited + bfs(root.right)
+        return visited + bfs(root.left) + bfs(root.right)
+        # Below is the first attempt that I didn't figure how to include the right part of the tree
+        # if root.left is not None:
+        #     return visited + bfs(root.left)
+        # if root.right is not None:
+        #     return visited + bfs(root.right)
