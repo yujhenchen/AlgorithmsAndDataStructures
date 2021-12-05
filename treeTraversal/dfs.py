@@ -19,6 +19,10 @@ def pre_order_dfs(root):
 # visit node from left side all the way till the end
 # start to add left node at the end, and add the right node at the end
 # from end to the top, left first to the right
-def post_order_dfs():
+def post_order_dfs(root):
+    # visit all the way from left and right till the end
     visited = []
-    return
+
+    if root is None:
+        return visited
+    post_order_dfs(root.left)
