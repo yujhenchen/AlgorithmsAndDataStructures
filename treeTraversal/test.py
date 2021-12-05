@@ -21,6 +21,7 @@ def print_nodes(results):
     for node in results:
         print(node.value)
 
+
 @pytest.mark.skip(reason="wait for finishing")
 def test_bfs():
     bst = get_bst()
@@ -28,6 +29,7 @@ def test_bfs():
     print(bst.root.value)
     results = bfs(bst.root)
     print_nodes(results)
+
 
 @pytest.mark.skip(reason="wait for finishing")
 def test_pre_order_dfs():
