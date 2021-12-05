@@ -1,7 +1,10 @@
+import pytest
 from bst import BST
 from bfs import bfs
+from dfs import pre_order_dfs
 
-def test_bfs():
+
+def get_bst():
     bst = BST()
     bst.insert(8)
     bst.insert(6)
@@ -10,8 +13,23 @@ def test_bfs():
     bst.insert(3)
     bst.insert(12)
     bst.insert(7)
+    return bst
+
+
+def print_nodes(results):
+    for node in results:
+        print(node.value)
+
+@pytest.mark.skip(reason="wait for finishing")
+def test_bfs():
+    bst = get_bst()
 
     print(bst.root.value)
     results = bfs(bst.root)
-    for node in results:
-        print(node.value)
+    print_nodes(results)
+
+
+def test_pre_order_dfs():
+    bst = get_bst()
+    results = pre_order_dfs(bst.root)
+    print_nodes(results)
