@@ -9,10 +9,13 @@ def pre_order_dfs(root):
 
     visited.append(root)
 
-    if root.left is not None:
-        visited += pre_order_dfs(root.left)
-    if root.right is not None:
-        visited += pre_order_dfs(root.right)
+    visited += pre_order_dfs(root.left) + pre_order_dfs(root.right)
+
+    # this is not needed, because each recursion pass either left or right as root
+    # if root.left is not None:
+    #     visited += pre_order_dfs(root.left)
+    # if root.right is not None:
+    #     visited += pre_order_dfs(root.right)
     return visited
 
 
@@ -27,13 +30,16 @@ def post_order_dfs(root):
         return visited
 
     visited += post_order_dfs(root.left) + post_order_dfs(root.right)
+    # this is not needed, because each recursion pass either left or right as root
+    # if root.left is not None:
+    #     # print("root.left.value: " + str(root.left.value))
+    #     visited.append(root.left)
+    # if root.right is not None:
+    #     # print("root.right.value: " + str(root.right.value))
+    #     visited.append(root.right)
+    # # debug use
+    # # for node in visited:
+    # #     print(node.value)
 
-    if root.left is not None:
-        # print("root.left.value: " + str(root.left.value))
-        visited.append(root.left)
-    if root.right is not None:
-        # print("root.right.value: " + str(root.right.value))
-        visited.append(root.right)
-    # for node in visited:
-    #     print(node.value)
+    visited.append(root)
     return visited

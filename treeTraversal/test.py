@@ -22,7 +22,7 @@ def print_nodes(results):
         print(node.value)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_bfs():
     bst = get_bst()
 
@@ -31,14 +31,14 @@ def test_bfs():
     print_nodes(results)
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_pre_order_dfs():
     bst = get_bst()
     results = pre_order_dfs(bst.root)
     print_nodes(results)
 
 
-@pytest.mark.skip(reason="wait for finishing")
+# @pytest.mark.skip(reason="wait for finishing")
 def test_post_order_dfs():
     bst = get_bst()
     results = post_order_dfs(bst.root)
