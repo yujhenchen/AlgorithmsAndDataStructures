@@ -1,7 +1,7 @@
 import pytest
 from bst import BST
 from bfs import bfs
-from dfs import pre_order_dfs
+from dfs import pre_order_dfs, post_order_dfs, first_order_dfs
 from dfs import post_order_dfs
 
 
@@ -31,15 +31,22 @@ def test_bfs():
     print_nodes(results)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_pre_order_dfs():
     bst = get_bst()
     results = pre_order_dfs(bst.root)
     print_nodes(results)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_post_order_dfs():
     bst = get_bst()
     results = post_order_dfs(bst.root)
+    print_nodes(results)
+
+
+# @pytest.mark.skip(reason="wait for finishing")
+def test_first_order_dfs():
+    bst = get_bst()
+    results = first_order_dfs(bst.root)
     print_nodes(results)

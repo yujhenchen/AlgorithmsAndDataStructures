@@ -43,3 +43,30 @@ def post_order_dfs(root):
 
     visited.append(root)
     return visited
+
+
+# visit node from left side all the way till the end
+# add the entire tree from left, root, right
+# move backward
+def first_order_dfs(root):
+    visited = []
+
+    if root is None:
+        return visited
+
+    visited += first_order_dfs(root.left) + first_order_dfs(root.right)
+
+    if root.left is not None:
+        visited.append(root.left)
+
+    visited.append(root)
+
+    if root.right is not None:
+        visited.append(root.right)
+
+    # # debug use
+    # for node in visited:
+    #     print(node.value)
+    # print()
+
+    return visited
