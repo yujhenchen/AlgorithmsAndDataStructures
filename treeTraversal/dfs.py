@@ -54,9 +54,8 @@ def in_order_dfs(root):
     if root is None:
         return visited
 
-    # # debug use
-    # for node in visited:
-    #     print(node.value)
-    # print()
+    visited += in_order_dfs(root.left)
+    visited.append(root)
+    visited += in_order_dfs(root.right)
 
     return visited
