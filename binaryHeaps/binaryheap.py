@@ -15,3 +15,12 @@ class MaxBinaryHeap(object):
     def __init__(self):
         super().__init__()
         self.values = []
+
+    def insert(self):
+        return
+
+    def extractMax(self):
+        return
+
+    def queue(self):
+        return
