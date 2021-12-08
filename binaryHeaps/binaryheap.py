@@ -40,7 +40,7 @@ class MaxBinaryHeap(object):
         nodeIndex = len(self.values) - 1
         parentNodeIndex = math.floor((nodeIndex - 1) / 2)
         parentNode = self.values[parentNodeIndex]
-        while node.value > parentNode.value:
+        while node.value > parentNode.value and nodeIndex is not 0:
             self.values[nodeIndex] = parentNode
             self.values[parentNodeIndex] = node
             # bubble up
