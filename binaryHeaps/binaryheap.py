@@ -50,6 +50,9 @@ class MaxBinaryHeap(object):
         return
 
     def extractMax(self):
+        # remove the max node from the heap
+        # replace with the most recent added
+        # adjust (sink down)
         return
 
     def queue(self):
