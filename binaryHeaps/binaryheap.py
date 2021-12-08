@@ -32,21 +32,21 @@ class MaxBinaryHeap(object):
         # and keep comparing and swaping until it reach to the root
         # find the parent of the node: use the formula and the nodes that are in values array
         node = Node(value)
+        self.values.append(node)
 
-        if self.values.count == 0:
-            self.values.append(node)
-        else:
-            nodeIndex = self.values.count - 1
+        if len(self.values) == 0:
+            return
+
+        nodeIndex = len(self.values) - 1
+        parentNodeIndex = math.floor((nodeIndex - 1) / 2)
+        parentNode = self.values[parentNodeIndex]
+        while node.value > parentNode.value:
+            self.values[nodeIndex] = parentNode
+            self.values[parentNodeIndex] = node
+            # bubble up
+            nodeIndex = parentNodeIndex
             parentNodeIndex = math.floor((nodeIndex - 1) / 2)
             parentNode = self.values[parentNodeIndex]
-            while node.value > parentNode.value:
-                self.values[nodeIndex] = parentNode
-                self.values[parentNodeIndex] = node
-                # bubble up
-                nodeIndex = parentNodeIndex
-                parentNodeIndex = math.floor((nodeIndex - 1) / 2)
-                parentNode = self.values[parentNodeIndex]
-
         return
 
     def extractMax(self):
