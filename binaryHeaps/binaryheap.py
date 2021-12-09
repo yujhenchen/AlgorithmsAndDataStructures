@@ -40,7 +40,7 @@ class MaxBinaryHeap(object):
         nodeIndex = len(self.values) - 1
         parentNodeIndex = math.floor((nodeIndex - 1) / 2)
         parentNode = self.values[parentNodeIndex]
-        while node.value > parentNode.value and nodeIndex is not 0:
+        while node.value > parentNode.value and nodeIndex != 0:
             self.values[nodeIndex] = parentNode
             self.values[parentNodeIndex] = node
             # bubble up
@@ -57,7 +57,15 @@ class MaxBinaryHeap(object):
         # sink down: the procedure for deleting the root from the heap (effectively extracting the maximum element
         # in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap
         # also called bubble-down, ...
-        return
+        maxNode = self.values[0]
+
+        node = self.values[0] = self.values[len(self.values) - 1]
+        self.values.pop()
+        # debug use
+        # for node in self.values:
+        #     print(node.value)
+
+        return maxNode
 
     def queue(self):
         return

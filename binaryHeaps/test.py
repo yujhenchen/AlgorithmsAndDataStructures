@@ -7,20 +7,23 @@ def print_heap(binaryheap):
         print(node.value)
 
 
-# @pytest.mark.skip(reason="wait for finishing")
+@pytest.mark.skip(reason="wait for finishing")
 def test_insert():
     binaryheap = MaxBinaryHeap()
     binaryheap.insert(1)
     binaryheap.insert(5)
     binaryheap.insert(8)
-    print_heap(binaryheap)
+    binaryheap.insert(17)
+    binaryheap.insert(9)
+    # print_heap(binaryheap)
     return binaryheap
 
 
-@pytest.mark.skip(reason="wait for finishing")
+#@pytest.mark.skip(reason="wait for finishing")
 def test_extractMax():
     binaryheap = test_insert()
-    print_heap(binaryheap)
+    binaryheap.extractMax()
+    #print_heap(binaryheap)
 
 
 @pytest.mark.skip(reason="wait for finishing")
