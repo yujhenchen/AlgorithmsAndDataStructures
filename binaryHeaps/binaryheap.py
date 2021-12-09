@@ -51,8 +51,12 @@ class MaxBinaryHeap(object):
 
     def extractMax(self):
         # remove the max node from the heap
-        # replace with the most recent added
-        # adjust (sink down)
+        # replace with the most recent added node (so it becomes new root)
+        # adjust (sink down): compare the new root (the node) with children, replace the current root with the child which has biggest value
+        # loop until the node with its children until none of children is greater than the node
+        # sink down: the procedure for deleting the root from the heap (effectively extracting the maximum element
+        # in a max-heap or the minimum element in a min-heap) and restoring the properties is called down-heap
+        # also called bubble-down, ...
         return
 
     def queue(self):
