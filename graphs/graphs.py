@@ -18,7 +18,8 @@ class Graph(object):
         super().__init__()
         self.adjancencyList = {}
 
-    def addVertex(self):
+    def addVertex(self, value):
+        self.adjancencyList[value] = []
         return
 
     def addEdge(self):
