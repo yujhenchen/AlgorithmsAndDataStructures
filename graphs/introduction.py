@@ -9,3 +9,5 @@
 
 # Type of graphs:
 # Undirected graph, directed graph, unweighted graph, weighted graph
+
+# Storing graphs: adjacency matrix, adjacency list
