@@ -1,12 +1,17 @@
 from graphs import Graph
 
 
+def printGraph(graph):
+    print(graph.adjancencyList)
+    print()
+
+
 def testAddVertex():
     graph = Graph()
     graph.addVertex("A")
     graph.addVertex("B")
     graph.addVertex("C")
-    # print(graph.adjancencyList)
+    printGraph(graph)
     return graph
 
 
@@ -14,11 +19,15 @@ def testAddEdge():
     graph = testAddVertex()
     graph.addEdge("A", "C")
     graph.addEdge("B", "C")
-    print(graph.adjancencyList)
+    printGraph(graph)
+    return graph
 
 
 def testRemoveEdge():
-    return
+    graph = testAddEdge()
+    graph.removeEdge("B", "C")
+    printGraph(graph)
+    return graph
 
 
 def testRemoveVertex():

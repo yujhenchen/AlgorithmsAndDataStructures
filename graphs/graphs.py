@@ -23,13 +23,14 @@ class Graph(object):
             self.adjancencyList[vertex] = []
 
     def addEdge(self, vertex1, vertex2):
-        if vertex1 in self.adjancencyList:
-            self.adjancencyList[vertex1].append(vertex2)
-        if vertex2 in self.adjancencyList:
-            self.adjancencyList[vertex2].append(vertex1)
+        self.adjancencyList[vertex1].append(vertex2)
+        self.adjancencyList[vertex2].append(vertex1)
 
-    def removeEdge(self):
-        return
+    def removeEdge(self, vertex1, vertex2):
+        if vertex1 in self.adjancencyList:
+            self.adjancencyList[vertex1].remove(vertex2)
+        if vertex2 in self.adjancencyList:
+            self.adjancencyList[vertex2].remove(vertex1)
 
     def removeVertex(self):
         return
