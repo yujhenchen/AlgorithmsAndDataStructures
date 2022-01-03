@@ -32,5 +32,8 @@ class Graph(object):
         if vertex2 in self.adjancencyList:
             self.adjancencyList[vertex2].remove(vertex1)
 
-    def removeVertex(self):
-        return
+    def removeVertex(self, vertex):
+        for key in self.adjancencyList:
+            if vertex in self.adjancencyList[key]:
+                self.adjancencyList[key].remove(vertex)
+        del self.adjancencyList[vertex]

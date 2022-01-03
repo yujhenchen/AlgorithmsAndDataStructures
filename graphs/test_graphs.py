@@ -31,4 +31,7 @@ def testRemoveEdge():
 
 
 def testRemoveVertex():
-    return
+    graph = testAddEdge()
+    graph.removeVertex("B")
+    printGraph(graph)
+    return graph
