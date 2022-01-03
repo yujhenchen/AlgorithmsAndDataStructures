@@ -6,11 +6,15 @@ def testAddVertex():
     graph.addVertex("A")
     graph.addVertex("B")
     graph.addVertex("C")
-    print(graph.adjancencyList)
+    # print(graph.adjancencyList)
+    return graph
 
 
 def testAddEdge():
-    return
+    graph = testAddVertex()
+    graph.addEdge("A", "C")
+    graph.addEdge("B", "C")
+    print(graph.adjancencyList)
 
 
 def testRemoveEdge():

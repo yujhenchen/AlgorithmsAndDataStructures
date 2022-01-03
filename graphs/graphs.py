@@ -22,8 +22,11 @@ class Graph(object):
         if vertex not in self.adjancencyList:
             self.adjancencyList[vertex] = []
 
-    def addEdge(self):
-        return
+    def addEdge(self, vertex1, vertex2):
+        if vertex1 in self.adjancencyList:
+            self.adjancencyList[vertex1].append(vertex2)
+        if vertex2 in self.adjancencyList:
+            self.adjancencyList[vertex2].append(vertex1)
 
     def removeEdge(self):
         return
