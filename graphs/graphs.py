@@ -18,9 +18,9 @@ class Graph(object):
         super().__init__()
         self.adjancencyList = {}
 
-    def addVertex(self, value):
-        self.adjancencyList[value] = []
-        return
+    def addVertex(self, vertex):
+        if vertex not in self.adjancencyList:
+            self.adjancencyList[vertex] = []
 
     def addEdge(self):
         return

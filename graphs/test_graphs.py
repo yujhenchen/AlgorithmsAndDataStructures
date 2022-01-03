@@ -1,4 +1,4 @@
-from graphs.graphs import Graph
+from graphs import Graph
 
 
 def testAddVertex():
@@ -6,7 +6,7 @@ def testAddVertex():
     graph.addVertex("A")
     graph.addVertex("B")
     graph.addVertex("C")
-    return
+    print(graph.adjancencyList)
 
 
 def testAddEdge():
