@@ -13,7 +13,7 @@
 # Storing graphs: adjacency matrix, adjacency list
 
 
-class Graph(object):
+class GraphTraversal(object):
     def __init__(self):
         super().__init__()
         self.adjancencyList = {}
@@ -23,8 +23,10 @@ class Graph(object):
             self.adjancencyList[vertex] = []
 
     def addEdge(self, vertex1, vertex2):
-        self.adjancencyList[vertex1].append(vertex2)
-        self.adjancencyList[vertex2].append(vertex1)
+        if vertex2 not in self.adjancencyList[vertex1]:
+            self.adjancencyList[vertex1].append(vertex2)
+        if vertex1 not in self.adjancencyList[vertex2]:
+            self.adjancencyList[vertex2].append(vertex1)
 
     def removeEdge(self, vertex1, vertex2):
         if vertex1 in self.adjancencyList:
@@ -37,3 +39,12 @@ class Graph(object):
             if vertex in self.adjancencyList[key]:
                 self.adjancencyList[key].remove(vertex)
         del self.adjancencyList[vertex]
+
+    def dfs(vertex):
+        result = []
+        visited = {}
+
+        return result
+
+    def bfs():
+        return

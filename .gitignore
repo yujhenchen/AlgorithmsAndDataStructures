@@ -111,3 +111,4 @@ dist
 /.pytest_cache
 /binaryHeaps/__pycache__
 /graphs/__pycache__
+/graphTraversal/__pycache__
